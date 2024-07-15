@@ -6,9 +6,9 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - mysql  # Ensure php depends on mysql
+      - mysql
     networks:
-      - my-network  # Define a custom network
+      - my-network
 
   mysql:
     image: mysql:5.7
@@ -17,7 +17,7 @@ services:
     volumes:
       - ./mysql-init:/docker-entrypoint-initdb.d
     networks:
-      - my-network  # Use the same network as php
+      - my-network
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -27,7 +27,7 @@ services:
     ports:
       - "8081:80"
     networks:
-      - my-network  # Use the same network as mysql
+      - my-network
 
 networks:
   my-network:

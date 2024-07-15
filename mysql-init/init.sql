@@ -10,5 +10,6 @@ CREATE TABLE IF NOT EXISTS users (
 
 INSERT INTO users (name, dob, address) 
 VALUES 
-    ("Nidhi Patel", '2000-10-29', '30 wortham dr'),
+    ("Nidhi Patel", '2000-10-29', '30 Wortham Dr');
+
     
